@@ -1,0 +1,40 @@
+{
+  "name": "draft-go",
+  "version": "0.0.1",
+  "description": "Grab and go draft.js editor",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "babel src --out-dir lib --copy-files",
+    "package": "webpack",
+    "test": "mocha --recursive --require babel-register"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/richardzcode/draft-go.git"
+  },
+  "keywords": [
+    "React",
+    "DraftJs",
+    "Editor"
+  ],
+  "author": "Richard Zhang <richardzcode@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/richardzcode/draft-go/issues"
+  },
+  "homepage": "https://github.com/richardzcode/draft-go#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "mocha": "^5.2.0",
+    "react": "^16.4.1",
+    "webpack": "^4.20.2",
+    "webpack-cli": "^3.1.2"
+  },
+  "dependencies": {
+    "draft-js": "^0.10.5",
+    "fsts": "0.0.44"
+  }
+}
