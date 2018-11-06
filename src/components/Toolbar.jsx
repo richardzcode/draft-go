@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { JS } from 'fsts';
 
 import {
   Type,
@@ -40,9 +41,12 @@ export default class Toolbar extends Component {
     let style = this.props.theme || GoTheme.toolbar;
     style = Object.assign({}, style, { top: y });
     const controlTheme = style.controls.control;
+    const dividerTheme = style.controls.controlDivider;
+
+    const p = JS.lessProps(this.props, ['theme', 'y', 'onControlClick']);
 
     return (
-      <div style={style}>
+      <div style={style} {...p}>
         <div
           style={style.button}
           onClick={() => this.setState({ expand: !this.state.expand })}
@@ -59,7 +63,7 @@ export default class Toolbar extends Component {
             <Control theme={controlTheme} onClick={() => this.handleControlClick('quote')}>
               <ChevronRight />
             </Control>
-            <ControlDivider theme={controlTheme} />
+            <ControlDivider theme={dividerTheme} />
             <Control theme={controlTheme} onClick={() => this.handleControlClick('bold')}>
               <Bold />
             </Control>
@@ -69,7 +73,7 @@ export default class Toolbar extends Component {
             <Control theme={controlTheme} onClick={() => this.handleControlClick('underline')}>
               <Underline />
             </Control>
-            <ControlDivider theme={controlTheme} />
+            <ControlDivider theme={dividerTheme} />
             <ImageControl
               theme={controlTheme}
               onSelected={(file) => this.handleControlClick('image', file)}

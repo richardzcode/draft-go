@@ -37,7 +37,7 @@ export default class ImageControl extends Component {
 
   render() {
     const style = this.props.theme || GoTheme.toolbar.controls.control;
-    const p = JS.lessProps(this.props, ['onClick', 'onSelected']);
+    const p = JS.lessProps(this.props, ['theme', 'onClick', 'onSelected']);
     return (
       <span style={style} onClick={this.handleClick} {...p}>
         <Camera />

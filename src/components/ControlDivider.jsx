@@ -1,13 +1,14 @@
 import React from 'react';
+import { JS } from 'fsts';
 
 import GoTheme from '../themes';
 
 const ControlDivider = (props) => {
-  let style = props.theme || GoTheme.toolbar.controls.control;
-  style = Object.assign({}, style, { width: 'auto', color: '#ddd' });
+  const style = props.theme || GoTheme.toolbar.controls.controlDivider;
+  const p = JS.lessProps(props, 'theme');
 
   return (
-    <span style={style} {...props}>|</span>
+    <span style={style} {...p}>|</span>
   )
 }
 

@@ -38,8 +38,11 @@ export default class GoEditor extends Component {
 
     const containerRect = getElement('go_editor_container')
       .getBoundingClientRect();
+    const toolbarRect = getElement('go_editor_toolbar')
+      .getBoundingClientRect();
 
-    const y = (rect.y < 0? 0 : rect.y) - containerRect.y;
+    const y = (rect.y < 0? 0 : rect.y) - containerRect.y +
+      (rect.height - toolbarRect.height) / 2;
 
     const { toolbarY } = this.state;
     if (y !== toolbarY) {
@@ -151,6 +154,7 @@ export default class GoEditor extends Component {
     return (
       <div id="go_editor_container" style={style}>
         <Toolbar
+          id="go_editor_toolbar"
           theme={style.toolbar}
           y={toolbarY}
           onControlClick={this.handleControlClick}
