@@ -1,6 +1,6 @@
 {
   "name": "draft-go",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Grab and go draft.js editor",
   "main": "lib/index.js",
   "scripts": {
