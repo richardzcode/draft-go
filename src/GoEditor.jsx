@@ -148,6 +148,7 @@ export default class GoEditor extends Component {
 
   render() {
     const editorRef = this.props.editorRef;
+    const { placeholder } = this.props;
     const { editorState, toolbarY } = this.state;
     const style = this.props.theme || GoTheme;
 
@@ -161,6 +162,7 @@ export default class GoEditor extends Component {
         />
         <div className="go-editor" style={style.editor}>
           <Editor
+            placeholder={placeholder}
             blockStyleFn={(block) => 'go-' + block.type}
             blockRendererFn={this.imageBlockRenderer}
             editorState={editorState}

@@ -48,6 +48,7 @@ toolbar.controls.controlDivider = Object.assign({},
   {
     width: 'auto',
     color: '#bbb',
+    background: 'transparent',
     border: '0',
     margin: '0',
     padding: '0'

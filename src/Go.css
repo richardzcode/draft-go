@@ -53,3 +53,8 @@
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
 }
+
+.public-DraftEditorPlaceholder-root {
+  position: absolute;
+  color: #aaa;
+}
