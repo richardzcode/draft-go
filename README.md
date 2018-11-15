@@ -27,4 +27,4 @@ export default class Main extends Component {
 }
 ```
 
-[Live Demo](https://richardzcode.github.io/draft-go)
+[Live Demo](https://richardz.io/draft-go/)
